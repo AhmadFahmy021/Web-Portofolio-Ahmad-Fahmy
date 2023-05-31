@@ -121,7 +121,7 @@
         <div class="container ">
             <h1 class="fw-bold text-center">Project</h1>
             <p class="fw-bold text-center">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            <div class="row pt-5 justify-content-center">
+            <div class="row pt-5 d-flex align-items-center justify-content-between">
                 <div class="col-md-4 col-12 pt-3">
                     <div class="card" style="width: 18rem;">
                         <img src="assets/img/image2.jpg" class="card-img-top" alt="...">
@@ -158,14 +158,10 @@
             <div class="row justify-content-center pt-5 mt-3">
                 <h1 class="text-center fw-bold">Contact Me</h1>
                 <div class="col-lg-8">
-                    <form action="" method="get">
+                    <form action="" method="get" id="formContact">
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama</label>
                             <input type="text" class="form-control" id="nama" placeholder="Example : Budi">
-                        </div>
-                        <div class="mb-3">
-                            <label for="hp" class="form-label">No. Hp</label>
-                            <input type="number" class="form-control" id="hp" placeholder="Example : 08123xxxxxxxx">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
@@ -173,7 +169,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Ketik pesan disini"></textarea>
+                            <textarea class="form-control" id="pesan" rows="2" placeholder="Ketik pesan disini"></textarea>
                         </div>
                         <div class="mb-3 d-grid gap-2 mx-auto col-6">
                             <button type="submit" class="btn btn-outline-dark">Kirim</button>
@@ -221,5 +217,6 @@
             var tahun = thn.getFullYear();
             document.getElementById("tahun").innerHTML = tahun;
     </script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
