@@ -213,9 +213,35 @@
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script language="javascript">
-            var thn = new Date;
-            var tahun = thn.getFullYear();
-            document.getElementById("tahun").innerHTML = tahun;
+        var thn = new Date;
+        var tahun = thn.getFullYear();
+        document.getElementById("tahun").innerHTML = tahun;
+
+        var contact = document.getElementById("formContact");
+
+        contact.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            var nama = document.getElementById("nama").value;
+            var email = document.getElementById("email").value;
+            var pesan = document.getElementById("pesan").value;
+
+            var url = "https://web.whatsapp.com/send",
+            phone = '6281252512160',
+            text = "Selamat "
+            ;
+
+            if(nama != "" && email != ""){
+                var tuj = url + '?phone='+ phone +
+                        '&text=' +
+                        '*Nama* : ' + nama + '%0A' +
+                        '*Email Address* : '+ email + '%0A' +
+                        '*Pesan* : '+ pesan  ;
+                window.open(tuj,'_blank');
+                contact.reset();
+
+            }
+        });
     </script>
     <script src="assets/js/script.js"></script>
 </body>
