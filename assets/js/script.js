@@ -4,7 +4,6 @@ contact.addEventListener("submit", (e) => {
     e.preventDefault();
 
     var nama = document.getElementById("nama").value;
-    var hp = document.getElementById("hp").value;
     var email = document.getElementById("email").value;
     var pesan = document.getElementById("pesan").value;
 
