@@ -159,6 +159,12 @@
                 <h1 class="text-center fw-bold">Contact Me</h1>
                 <div class="col-lg-8">
                     <form action="" method="get" id="formContact">
+                        <div id="error" hidden class="alert alert-danger text-center">
+                            <!-- <p id="para1"></p> -->
+                        </div>
+                        <div id="success" hidden class="alert alert-success text-center">
+                            <!-- <p id="para2"></p> -->
+                        </div>
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama</label>
                             <input type="text" class="form-control" id="nama" placeholder="Example : Budi">
@@ -225,21 +231,32 @@
             var nama = document.getElementById("nama").value;
             var email = document.getElementById("email").value;
             var pesan = document.getElementById("pesan").value;
+            var alertS = document.getElementById("success"); 
+            var error = document.getElementById("error"); 
 
             var url = "https://web.whatsapp.com/send",
             phone = '6281252512160',
-            text = "Selamat "
+            text = "Halo 👋 Saya, Memiliki Beberapa Keperluan",
+            penutup = "Terima Kasih "
             ;
 
-            if(nama != "" && email != ""){
+            if(nama != "" && email != "" && pesan != ""){
                 var tuj = url + '?phone='+ phone +
-                        '&text=' +
+                        '&text=' + text + '%0A' + '%0A' +
                         '*Nama* : ' + nama + '%0A' +
                         '*Email Address* : '+ email + '%0A' +
-                        '*Pesan* : '+ pesan  ;
+                        '*Pesan* : '+ pesan + '%0A' + '%0A' + penutup ;
                 window.open(tuj,'_blank');
                 contact.reset();
-
+                alertS.removeAttribute("hidden");
+                alertS.innerHTML = "Success Terkirim";
+                
+            } else {
+                contact.reset();
+                
+                //contact.load();
+                error.removeAttribute("hidden");
+                error.innerHTML = "Gagal Terkirim (Form Harus Terisi Lengkap)";
             }
         });
     </script>
