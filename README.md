@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
-  # Nama
+  <h1 class="text-center">Biografi Data</h1>
+
+  <div class="container">
+    <p>Nama : Ahmad Fahmy Ghifariel Akbar</p>
+  </div>
 </body>
 </html>
